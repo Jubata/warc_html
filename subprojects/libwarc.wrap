@@ -1,4 +1,4 @@
 [wrap-git]
 directory = libwarc
-url=https://github.com/jvanz/libwarc.git
+url=https://github.com/Jubata/libwarc.git
 revision=c53ee7c
