@@ -1,0 +1,15 @@
+[submodule "subprojects/http-parser"]
+	path = subprojects/http-parser
+	url = https://github.com/nodejs/http-parser.git
+[submodule "subprojects/libhubbub"]
+	path = subprojects/libhubbub
+	url = git://git.netsurf-browser.org/libhubbub.git
+[submodule "subprojects/buildsystem"]
+	path = subprojects/buildsystem
+	url = git://git.netsurf-browser.org/buildsystem.git
+[submodule "subprojects/libparserutils"]
+	path = subprojects/libparserutils
+	url = git://git.netsurf-browser.org/libparserutils.git
+[submodule "subprojects/libyuarel"]
+	path = subprojects/libyuarel
+	url = https://github.com/jacketizer/libyuarel.git

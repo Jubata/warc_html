@@ -1,0 +1,4 @@
+[wrap-git]
+directory = libwarc
+url=https://github.com/jvanz/libwarc.git
+revision=c53ee7c
