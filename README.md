@@ -1,5 +1,5 @@
 # warc_html
-It is unsuccessful attempt to parse html tags from WARC files. The parsing rate is approximately 30MB/s. Code is ugly and slow. There are more convinint tools to perform this task better (go, node.js, python or maybe rust). 
+It is unsuccessful attempt to parse html tags from WARC files. The parsing rate is approximately 30MB/s. Code is ugly and slow. There are more convinint tools to perform this task (go, node.js, python or maybe rust). 
 
 ### How to build 
 ```
