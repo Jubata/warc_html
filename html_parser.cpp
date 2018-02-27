@@ -81,10 +81,10 @@ void HTMLParser::parse(const std::string &url, const uint8_t* buf, size_t len, S
 	parserutils_inputstream_destroy(stream);
 
   for(auto& attr: attrName) {
-    stats->add_entity(url, true, attr.first, attr.second);
+    stats->addEntity(url, true, attr.first, attr.second);
   }
   for(auto& attr: attrValue) {
-    stats->add_entity(url, false, attr.first, attr.second);
+    stats->addEntity(url, false, attr.first, attr.second);
   }
 }
 

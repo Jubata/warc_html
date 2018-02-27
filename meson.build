@@ -1,6 +1,6 @@
 project('warc_html', 'cpp', version: '0.9.0', default_options : ['cpp_std=c++14'])
 
-sources = ['main.cpp', 'html_parser.h', 'html_parser.cpp']
+sources = ['main.cpp', 'html_parser.h', 'html_parser.cpp', 'stats.h', 'stats.cpp']
 
 # libwarc dependency
 libwarc_sp = subproject('libwarc') #default_options
@@ -84,10 +84,17 @@ endif
 yuarel_dep = declare_dependency(dependencies : yuarel_lib,
   include_directories : yuarel_inc)
 
-# libwarc dependency
+# jsoncpp dependency
 jsoncpp_sp = subproject('jsoncpp') #default_options
 jsoncpp = jsoncpp_sp.get_variable('jsoncpp_dep')
 
+#text-csv
+textcsv_dep = declare_dependency( include_directories : include_directories(['subprojects/text-csv/include/text']) )
+
 # target executable
 executable('warc_html', sources, 
-	dependencies: [libwarc, http_dep, hubbub_dep, parseutils_dep, yuarel_dep, jsoncpp] )
+	dependencies: [libwarc, http_dep, hubbub_dep, parseutils_dep, yuarel_dep, jsoncpp, textcsv_dep] )
+
+executable('join_csv', ['join_csv.cpp', 'stats.h', 'stats.cpp'], 
+	dependencies: [libwarc, http_dep, hubbub_dep, parseutils_dep, yuarel_dep, jsoncpp,
+                 dependency('threads'), textcsv_dep] )

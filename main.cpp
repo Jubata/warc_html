@@ -73,6 +73,14 @@ void parse_http_response(const std::string& buf, const std::string& uri) {
 
 }
 
+//parse WARC file from stdin
+//count url+attribute names/values which contains "comment" string
+//output result records in json format to stdout:
+// url (page url # <is attribute name> # attribute)
+// totalFields
+// countUrls
+// bestUrl (paragon page url)
+// bestMeanFieldsPerPage
 int main(int argc, char* argv[]) {
 
   unsigned count = 0;

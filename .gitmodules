@@ -13,3 +13,6 @@
 [submodule "subprojects/libyuarel"]
 	path = subprojects/libyuarel
 	url = https://github.com/jacketizer/libyuarel.git
+[submodule "subprojects/text-csv"]
+	path = subprojects/text-csv
+	url = https://github.com/roman-kashitsyn/text-csv.git
