@@ -98,3 +98,7 @@ executable('warc_html', sources,
 executable('join_csv', ['join_csv.cpp', 'stats.h', 'stats.cpp'], 
 	dependencies: [libwarc, http_dep, hubbub_dep, parseutils_dep, yuarel_dep, jsoncpp,
                  dependency('threads'), textcsv_dep] )
+
+executable('parse_html', ['parse_html.cpp', 'stats.h', 'stats.cpp', 'html_parser.cpp', 'html_parser.h'], 
+	dependencies: [libwarc, http_dep, hubbub_dep, parseutils_dep, yuarel_dep, jsoncpp,
+                 dependency('threads'), textcsv_dep] )
